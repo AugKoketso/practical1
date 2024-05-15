@@ -30,7 +30,7 @@ const BoxComponent = () => {
   
 
 
-  
+
 Episode V
 THE EMPIRE STRIKES BACK
 It is a dark time for the
@@ -62,7 +62,7 @@ the far reaches of space....
     height: '100vh',
     overflow: 'hidden',
     backgroundColor: 'black',
-    perspective: '400px'  // Perspective needed for the 3D effect
+    perspective: '800px'  // Perspective needed for the 3D effect
   };
 
   // Inline styles for the text
@@ -73,10 +73,10 @@ the far reaches of space....
     transform: 'translateX(-50%) rotateX(20deg) translateZ(0)',
     transformOrigin: '50% 100%',
     whiteSpace: 'pre-wrap',
-    fontSize: '2em',
+    fontSize: '2.5em',
     fontFamily: '"Arial", sans-serif',
     color: 'yellow',
-    animation: 'crawl 120s linear infinite' // Ensure a smooth crawl
+    animation: 'crawl 180s linear infinite' // Ensure a smooth crawl
   };
 
   // useEffect to add keyframes and adjust styles dynamically
@@ -87,9 +87,12 @@ the far reaches of space....
       @keyframes crawl {
         0% {
           top: 100vh;
+          transform: rotateX(25deg) translateZ(0)
         }
         100% {
-          top: -300vh; // Adjust based on the amount of text
+
+          top: -500vh; // Adjust based on the amount of text
+          transform: rotateX(25deg) translateZ(-1200px);
         }
       }
       
